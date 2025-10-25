@@ -14,7 +14,7 @@ from scipy.integrate import quad
 from scipy.fft import fht 
 import math 
 import time 
-data=np.loadtxt('explanatory10_pk.dat', unpack=True)
+data=np.loadtxt('explanatory10_pk.dat', unpack=True) #Cambia el .dat respecto al modelo usado para calcular el power spectrum en CLASS.
 column=data
 splits=np.array_split(column,2)
 for array in splits:
@@ -214,3 +214,4 @@ def xifull(rjlist, miuklist, bF, beta, sigp, sigt, Apeak, kNL, kP, kv0, kV, aNL,
         xicos = xicosmo(rj, miuk, alphapl, alphapp)
         xicoslist.append(xicos)
     return xicoslist
+
